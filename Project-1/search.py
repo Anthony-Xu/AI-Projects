@@ -142,7 +142,6 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    
     def priorityFunction(tuple):
         return heuristic(tuple[0], problem) + problem.getCostOfActions(tuple[1])
 
